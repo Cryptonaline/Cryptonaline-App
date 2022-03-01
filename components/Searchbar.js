@@ -11,7 +11,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Image } from 'react-native';
 
-const Searchbar = (props) => {
+const Searchbar = () => {
   return (
     <View style={styles.searchBarContainer}>
       <Image
@@ -20,8 +20,8 @@ const Searchbar = (props) => {
       />
       <TextInput
         style={styles.searchBar}
-        onChangeText={props.onChangeText}
-        value={props.value}
+        onChangeText={onChangeText}
+        value={value}
         placeholder={
           props.placeholder
             ? props.placeholder
@@ -29,11 +29,11 @@ const Searchbar = (props) => {
         }
       />
       {props.editing ? (
-        <TouchableOpacity onPress={props.onClear} style={{ marginRight: '7%' }}>
+        <TouchableOpacity onPress={onClear} style={{ marginRight: '7%' }}>
           <Text style={{ color: '#0078b0' }}>Clear</Text>
         </TouchableOpacity>
       ) : null}
-      {props.loading ? (
+      {loading ? (
         <ActivityIndicator
           style={{ marginRight: '5%' }}
           size={'small'}
@@ -45,14 +45,7 @@ const Searchbar = (props) => {
   );
 };
 
-Searchbar.propType = {
-  onChangeText: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  loading: PropTypes.bool.isRequired,
-  editing: PropTypes.bool.isRequired,
-  onClear: PropTypes.func.isRequired,
-};
+
 const styles = StyleSheet.create({
   searchBar: {
     flex: 1,

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { React, useState } from 'react';
 import {
   View,
@@ -14,7 +13,7 @@ import styles from '../../styles/Watchlistitem.style';
 export const SLIDER_WIDTH = Dimensions.get('window').width + 0;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
-const Watchlistitem = ({ item, index }) => {
+const Watchlistitem = ({  }) => {
   return (
     <>
       <Text style={styles.watchlist}>Watchlist</Text>

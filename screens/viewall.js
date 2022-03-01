@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 
-const Viewall = ({ route, navigation }) => {
+const Viewall = ({  }) => {
   return (
     <View
       style={{
