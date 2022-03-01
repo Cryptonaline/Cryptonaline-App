@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import React from 'react';
 import Searchbar from '../components/Searchbar';
-import Stories from '../components/Stories';
+import Stories from '../components/Stories/Stories';
 import Watchlist from '../components/Watchlist/Watchlist';
 import CarouselCards from '../components/Carousel/CarouselCards';
 import { useNavigation } from '@react-navigation/native';

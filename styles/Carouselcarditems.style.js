@@ -1,7 +1,6 @@
-import CarouselCardItem, {
-  SLIDER_WIDTH,
-  ITEM_WIDTH,
-} from '../components/Carousel/CarouselCardItem';
+import { Dimensions } from "react-native";
+export const SLIDER_WIDTH = Dimensions.get('window').width + 5;
+export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
 export default {
   container: {

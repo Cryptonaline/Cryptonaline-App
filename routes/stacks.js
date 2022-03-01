@@ -9,6 +9,7 @@ import Profile from '../screens/Profile';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Appbar from '../components/Appbar';
+import Status from '../components/Stories/Status'
 
 const stacks = () => {
   const Stack = createNativeStackNavigator();
@@ -27,6 +28,7 @@ const stacks = () => {
         <Stack.Screen name="Faq" component={Faq} />
         <Stack.Screen name="Termsncondition" component={Termsncondition} />
         <Stack.Screen name="Profilephoto" component={Profilephoto} />
+        <Stack.Screen name="Status" component={Status} />
       </Stack.Navigator>
     </NavigationContainer>
   );
