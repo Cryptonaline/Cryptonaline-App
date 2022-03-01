@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -12,8 +12,8 @@ import Ionic from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
 
 const Status = ({}) => {
-  const {name} = route.params;
-  const {image} = route.params;
+  const { name } = route.params;
+  const { image } = route.params;
 
   useEffect(() => {
     let timer = setTimeout(() => {
@@ -43,7 +43,8 @@ const Status = ({}) => {
         position: 'relative',
         justifyContent: 'center',
         alignItems: 'center',
-      }}>
+      }}
+    >
       <StatusBar backgroundColor="black" barStyle="light-content" />
       <View
         style={{
@@ -53,13 +54,15 @@ const Status = ({}) => {
           backgroundColor: 'gray',
           position: 'absolute',
           top: 18,
-        }}>
+        }}
+      >
         <Animated.View
           style={{
             height: '100%',
             backgroundColor: 'white',
             width: progressAnimation,
-          }}></Animated.View>
+          }}
+        ></Animated.View>
       </View>
       <View
         style={{
@@ -70,7 +73,8 @@ const Status = ({}) => {
           top: 12,
           left: 0,
           width: '90%',
-        }}>
+        }}
+      >
         <View
           style={{
             borderRadius: 100,
@@ -78,7 +82,8 @@ const Status = ({}) => {
             height: 30,
             justifyContent: 'center',
             alignItems: 'center',
-          }}>
+          }}
+        >
           <Image
             source={image}
             style={{
@@ -95,21 +100,22 @@ const Status = ({}) => {
             justifyContent: 'space-between',
             flexDirection: 'row',
             width: '100%',
-          }}>
-          <Text style={{color: 'white', fontSize: 15, paddingLeft: 10}}>
+          }}
+        >
+          <Text style={{ color: 'white', fontSize: 15, paddingLeft: 10 }}>
             {name}
           </Text>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Ionic
               name="close"
-              style={{fontSize: 20, color: 'white', opacity: 0.6}}
+              style={{ fontSize: 20, color: 'white', opacity: 0.6 }}
             />
           </TouchableOpacity>
         </View>
       </View>
       <Image
         source={image}
-        style={{position: 'absolute', width: '100%', height: 600}}
+        style={{ position: 'absolute', width: '100%', height: 600 }}
       />
       <View
         style={{
@@ -118,12 +124,13 @@ const Status = ({}) => {
           left: 0,
           flexDirection: 'row',
           alignItems: 'center',
-          paddingLeft:20,
-          paddingRight:25,
+          paddingLeft: 20,
+          paddingRight: 25,
           justifyContent: 'space-between',
           marginVertical: 10,
           width: '100%',
-        }}>
+        }}
+      >
         <TextInput
           placeholder="send message"
           placeholderTextColor="white"
@@ -139,7 +146,7 @@ const Status = ({}) => {
           }}
         />
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Feather name="navigation" style={{fontSize: 30, color: 'white'}} />
+          <Feather name="navigation" style={{ fontSize: 30, color: 'white' }} />
         </TouchableOpacity>
       </View>
     </View>

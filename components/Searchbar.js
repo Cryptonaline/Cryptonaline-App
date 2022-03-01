@@ -45,7 +45,6 @@ const Searchbar = () => {
   );
 };
 
-
 const styles = StyleSheet.create({
   searchBar: {
     flex: 1,

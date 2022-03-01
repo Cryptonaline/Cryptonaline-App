@@ -13,7 +13,7 @@ import styles from '../../styles/Watchlist.style';
 export const SLIDER_WIDTH = Dimensions.get('window').width + 110;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
-const Watchlist = ({ }) => {
+const Watchlist = ({}) => {
   const navigation = useNavigation();
 
   return (

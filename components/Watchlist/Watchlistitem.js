@@ -13,7 +13,7 @@ import styles from '../../styles/Watchlistitem.style';
 export const SLIDER_WIDTH = Dimensions.get('window').width + 0;
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7);
 
-const Watchlistitem = ({  }) => {
+const Watchlistitem = ({}) => {
   return (
     <>
       <Text style={styles.watchlist}>Watchlist</Text>
