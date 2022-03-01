@@ -1,39 +1,38 @@
 import React from 'react';
-import {View, Text, ScrollView, TouchableOpacity, Image} from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 const Stories = () => {
   const navigation = useNavigation();
 
   const storyInfo = [
-   
     {
       id: 0,
       name: 'Ram_Charan',
-      image: require('../../storage/images/profile1.jpg'),
+      image: require('../../assets/storyImage/profile1.jpg'),
     },
     {
       id: 0,
       name: 'Tom',
-      image: require('../../storage/images/profile2.jpg'),
+      image: require('../../assets/storyImage/profile2.jpg'),
     },
     {
       id: 0,
       name: 'The_Groot',
-      image: require('../../storage/images/profile3.jpg'),
+      image: require('../../assets/storyImage/profile3.jpg'),
     },
     ,
     {
       id: 0,
       name: 'loverland',
-      image: require('../../storage/images/profile4.jpg'),
+      image: require('../../assets/storyImage/profile4.jpg'),
     },
     ,
     {
       id: 0,
       name: 'chillhouse',
-      image: require('../../storage/images/profile5.jpg'),
+      image: require('../../assets/storyImage/profile5.jpg'),
     },
   ];
 
@@ -41,7 +40,8 @@ const Stories = () => {
     <ScrollView
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      style={{paddingVertical: 20}}>
+      style={{ paddingVertical: 20 }}
+    >
       {storyInfo.map((data, index) => {
         return (
           <TouchableOpacity
@@ -52,13 +52,15 @@ const Stories = () => {
                 name: data.name,
                 image: data.image,
               })
-            }>
+            }
+          >
             <View
               style={{
                 flexDirection: 'column',
                 paddingHorizontal: 8,
                 position: 'relative',
-              }}>
+              }}
+            >
               <View
                 style={{
                   width: 88,
@@ -69,7 +71,8 @@ const Stories = () => {
                   borderColor: 'transparent',
                   justifyContent: 'center',
                   alignItems: 'center',
-                }}>
+                }}
+              >
                 <Image
                   source={data.image}
                   style={{
@@ -86,7 +89,8 @@ const Stories = () => {
                   textAlign: 'center',
                   fontSize: 10,
                   opacity: data.id == 0.5,
-                }}>
+                }}
+              >
                 {data.name}
               </Text>
             </View>
